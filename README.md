@@ -60,7 +60,9 @@ sudo apt install git
 git --version
 ```
 ## Python and C++
-Fortunately python3 interpreter and C compiler are preinstalled on linux, so no worries it is no windows.
+Fortunately python3 interpreter and C compiler are preinstalled on linux, so no worries it is no Windows.
+
+------------
 
 If I found more tools, I will add them here. If you find someting interesting don't hesitate of letting me know.
 

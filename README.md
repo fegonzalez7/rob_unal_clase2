@@ -195,3 +195,11 @@ It creates a node from the *turtlesim* package with the name *sim*, additionally
 The other parts of the packages will be treated in class, so try to attempt.
 
 ------------
+
+**Aknolegments:**
+
+ - Jose Manuel Fajardo
+ - Sebastian Realpe 
+ - Hans Milos Toquica
+
+This repo has taken a lot of effort, so consider to leave a star, [follow me](https://felipeg17.github.io/index.html), and if you feel generous I have paypal (just kidding).

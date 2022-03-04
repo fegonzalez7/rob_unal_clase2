@@ -196,7 +196,7 @@ The other parts of the packages will be treated in class, so try to attempt.
 
 ------------
 
-**Aknolegments:**
+**Acknowledgments:**
 
  - Jose Manuel Fajardo
  - Sebastian Realpe 

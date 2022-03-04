@@ -193,3 +193,5 @@ It condense multiple commands in just one executable file. Let's take a look:
 It creates a node from the *turtlesim* package with the name *sim*, additionally, it loads some parameters stored in the *config/params.yaml* (spoiler: those params simply change the canvas color). The latter is really important because a lot of packages load info from different configuration files, so remember this syntax. At the same time the launch file *launches* *roscore* if it is needed.
 
 The other parts of the packages will be treated in class, so try to attempt.
+
+------------

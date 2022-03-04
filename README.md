@@ -70,4 +70,22 @@ If I found more tools, I will add them here. If you find someting interesting do
 
 ## Turtlesim 
 
-Now the real businesses
+Now the real businesses.
+
+Clone the *hello_turtle* repo from [here](https://github.com/felipeg17/hello_turtle). It's a sort of hello world in the ROS community. Some changes have been added, but don't worry, during the class you will learn most of the concepts.
+
+##### Run ROSCORE
+First open 3 terminals (if you use Kitty press ctrl + shift + enter trhee times) and run:
+**First terminal**
+```console
+roscore
+```
+**Second terminall**
+```console
+rosrun turtlesim turtlesim_node
+```
+You will get someting like this:
+[![Turtle1](Turtle "Turtle1")](https://i.postimg.cc/j2TbKyPc/Screenshot-from-2022-03-04-12-10-27.png "Turtle1")
+
+
+

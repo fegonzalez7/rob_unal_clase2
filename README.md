@@ -3,7 +3,7 @@
 Modern robotics relies in the versatile middleware know as ROS (Robotic Operative System). Some of the most useful tools in robotics run in this framework. Learning ROS could lead to insanity (jikes...) but fortunaly with time and patience (tons of), all of you young padawans will master the power of ROS.
 
 ### Linux
-**ROS runs on linux, period. **
+**ROS runs on linux, period.**
 
 There are a couple of ways to run Linux:
 - Native instalation (Recommended, almost mandatory)

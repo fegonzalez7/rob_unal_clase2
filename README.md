@@ -68,24 +68,53 @@ If I found more tools, I will add them here. If you find someting interesting do
 
 ------------
 
-## Turtlesim 
+## Turtlesim
 
 Now the real businesses.
 
 Clone the *hello_turtle* repo from [here](https://github.com/felipeg17/hello_turtle). It's a sort of hello world in the ROS community. Some changes have been added, but don't worry, during the class you will learn most of the concepts.
 
-##### Run ROSCORE
+##### Run ROSCORE and Turtlesim_node
 First open 3 terminals (if you use Kitty press ctrl + shift + enter trhee times) and run:
 **First terminal**
 ```console
 roscore
 ```
-**Second terminall**
+**Second terminal**
 ```console
 rosrun turtlesim turtlesim_node
 ```
+![alt text](https://i.postimg.cc/j2TbKyPc/Screenshot-from-2022-03-04-12-10-27.png)
+
 You will get someting like this:
-[![Turtle1](Turtle "Turtle1")](https://i.postimg.cc/j2TbKyPc/Screenshot-from-2022-03-04-12-10-27.png "Turtle1")
+![alt text](https://i.postimg.cc/FsD45dRb/Screenshot-from-2022-03-04-12-10-50.png)
+If you are lucky enough, you will get a better turtle icon than me.
+
+##### Nodes and Topics
+In the third terminal run:
+**Third terminal**
+```console
+rostopic list
+rosnode list
+```
+![alt text](https://i.postimg.cc/bwrjzyD7/Screenshot-from-2022-03-04-12-11-17.png)
+
+You will see all topics and nodes running. Notice that the topics related with the turtle simulation have the */turtle1* namespace.
+
+Now in the same terminal run:
+**Third terminal**
+```console
+rosrun turtlesim turtle_teleop_key
+```
+It will allow you to move the turtle around using the keys.
+
+Open a new terminal and run:
+**Fourth terminal**
+```console
+rqt_graph
+```
+![alt text](https://i.postimg.cc/0NJRwVCZ/Screenshot-from-2022-03-04-12-13-44.png)
+A graphical visualization of the topics and nodes will apper, It shows the interconnections between them.
 
 
 

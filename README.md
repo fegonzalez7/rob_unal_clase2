@@ -60,7 +60,7 @@ sudo apt install git
 git --version
 ```
 ## Python and C++
-Fortunately, python3 interpreter and C compiler are preinstalled on Linux, so no worries it is no Windows.
+Fortunately, python3 interpreter and C compiler are preinstalled on Linux, so no worries it is not Windows.
 
 ------------
 
@@ -202,4 +202,4 @@ The other parts of the packages will be treated in class, so try to attempt.
  - Sebastian Realpe 
  - Hans Milos Toquica
 
-This repo has taken a lot of effort, so consider to leave a star, [follow me](https://felipeg17.github.io/index.html), and if you feel generous I have paypal (just kidding).
+This repo has taken a lot of effort, so consider to leave a star, [follow me](https://felipeg17.github.io/index.html), and if you feel generous I have [Paypal](https://paypal.me/fegonzalez17?country.x=CO&locale.x=en_US) (just kidding).

@@ -6,10 +6,10 @@ Modern robotics relies on the versatile middleware known as ROS (Robotic Operati
 **ROS runs on linux, period.**
 
 There are a couple of ways to run Linux:
-- Native installation :sunglasses: (Recommended, almost mandatory)
-- Virtual machine :baby: (Almost everything works, but intensive GPU apps will crash)
-- Docker :new: (Too new)
-- Linux substrate for windows :alien: (Fancy, but it has some compatibility issues, and it has no GUI)
+- Native installation :alien: (Recommended, almost mandatory)
+- Virtual machine :nail_care: (Almost everything works, but intensive GPU apps will crash)
+- Docker :whale2: (Too new)
+- Linux substrate for windows :trollface: (Fancy, but it has some compatibility issues, and it has no GUI)
 
 For this course, the Linux of choice is [Ubuntu 20.04 LTS](https://ubuntu.com/download/desktop "Ubuntu 20.04 LTS"). In this [link](https://www.tecmint.com/install-ubuntu-20-04-desktop/ "link") you will find a good installation tutorial.
 

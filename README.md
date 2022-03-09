@@ -13,7 +13,9 @@ There are a couple of ways to run Linux:
 
 For this course, the Linux of choice is [Ubuntu 20.04 LTS](https://ubuntu.com/download/desktop "Ubuntu 20.04 LTS"). In this [link](https://www.tecmint.com/install-ubuntu-20-04-desktop/ "link") you will find a good installation tutorial.
 
+<p align="center">
 <img src="https://images.wondershare.com/recoverit/article/11/linux-vs-windows-8.jpg" alt="drawing" width="600"/>
+</p>
 
 ### ROS
 
@@ -44,8 +46,20 @@ After years of trying learning ROS, I have compiled some useful tools, some of t
 #### VSCode
 Thanks to Microsoft for one of the best code editors in the world. I strongly recommend it. [Here](https://code.visualstudio.com/docs/setup/linux "Here") there is the official way to install VScode on Ubuntu.
 
+<p align="center">
+<img src="https://assets-global.website-files.com/6080d45b6168d4415fe5cbd7/608774655b7a0acbaf55de02_1589356832-code-editor-report-card.png" alt="drawing" width="700"/>
+</p>
+<p align="center">
+<img src="https://assets-global.website-files.com/6080d45b6168d4415fe5cbd7/608774658fa197d2436608e9_1589356866-vscode-ranking.png" alt="drawing" width="700"/>
+</p>
+
 #### Kitty
 Linux terminal is really powerful, when you master the shell you are gonna look kinda hackerish. Nonetheless, the default terminal in Ubuntu could be constrained. FajardROS found Kitty, since then I started loving cats. [Link](https://sw.kovidgoyal.net/kitty/binary/ "Link") to official page, and link for the installation [guide](https://connectwww.com/how-to-install-kitty-on-ubuntu-kitty-terminal-emulator/61186/ "guide").
+
+<p align="center">
+<img src="https://sw.kovidgoyal.net/kitty/_static/kitty.svg" alt="drawing" width="250"/>
+<img src="https://user-images.githubusercontent.com/6448975/33396524-0dce2240-d549-11e7-9674-be7f006e712f.png" alt="drawing" width="400"/>
+</p>
 
 #### Catkin build
 Once you install ROS you realize that catkin is a package compiler (kinda). *catkin_make* compiles the entire workspace, there is no harm if you have a couple of light packages, but if you have a lot of packages in one workspace, I recommend you to install *catkin_build*. It will allow compiling the packages separately. Open a terminal (hopefully kitty) and run:
@@ -65,8 +79,17 @@ sudo apt update
 sudo apt install git
 git --version
 ```
+<p align="center">
+<img src="https://techies-world.com/wp-content/uploads/2016/08/1color-lightbg@2x.png" alt="drawing" width="500"/>
+</p>
+
 ## Python and C++
 Fortunately, python3 interpreter and C compiler are preinstalled on Linux, so no worries it is not Windows.
+
+<p align="center">
+<img src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Python-vs-C_Watermarked.b9da21127ecc.jpg&w=960&sig=9ceea2c6d185d21da520a7576ac82e5fe1d9dc74
+" alt="drawing" width="600"/>
+</p>
 
 ------------
 

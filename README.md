@@ -87,8 +87,7 @@ git --version
 Fortunately, python3 interpreter and C compiler are preinstalled on Linux, so no worries it is not Windows.
 
 <p align="center">
-<img src="https://robocrop.realpython.net/?url=https%3A//files.realpython.com/media/Python-vs-C_Watermarked.b9da21127ecc.jpg&w=960&sig=9ceea2c6d185d21da520a7576ac82e5fe1d9dc74
-" alt="drawing" width="600"/>
+<img src="https://i.postimg.cc/RCJ4QfRf/Screenshot-from-2022-03-08-21-10-26.png" alt="drawing" width="600"/>
 </p>
 
 ------------

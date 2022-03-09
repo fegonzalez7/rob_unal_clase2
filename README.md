@@ -225,6 +225,10 @@ The other parts of the packages will be treated in class, so try to attempt.
 
 ------------
 
+`<Lab guide>` : < Soon >
+
+------------
+
 **Acknowledgments:**
 
  - Jose Manuel Fajardo

@@ -6,13 +6,19 @@ Modern robotics relies on the versatile middleware known as ROS (Robotic Operati
 **ROS runs on linux, period.**
 
 There are a couple of ways to run Linux:
-- Native installation (Recommended, almost mandatory)
-- Virtual machine (Almost everything works, but intensive GPU apps will crash)
-- Docker (Too new)
-- Linux substrate for windows (Fancy, but it has some compatibility issues, and it has no GUI)
+- Native installation :sunglasses: (Recommended, almost mandatory)
+- Virtual machine :baby: (Almost everything works, but intensive GPU apps will crash)
+- Docker :new: (Too new)
+- Linux substrate for windows :alien: (Fancy, but it has some compatibility issues, and it has no GUI)
 
 For this course, the Linux of choice is [Ubuntu 20.04 LTS](https://ubuntu.com/download/desktop "Ubuntu 20.04 LTS"). In this [link](https://www.tecmint.com/install-ubuntu-20-04-desktop/ "link") you will find a good installation tutorial.
+
+<img src="https://images.wondershare.com/recoverit/article/11/linux-vs-windows-8.jpg" alt="drawing" width="600"/>
+
 ### ROS
+
+<img src="https://www.ros.org/imgs/logo-white.png" alt="drawing" width="300"/>
+
 Once Linux has been installed, it's ROS time. For this course, ROS Noetic will be used. The installation steps for ubuntu are [here](http://wiki.ros.org/noetic/Installation/Ubuntu "here"), for other Linux distros look [here](http://wiki.ros.org/noetic/Installation "here").
 
 In any case, I left the instructions in this repo as well. Just open a new terminal and run the following commands:

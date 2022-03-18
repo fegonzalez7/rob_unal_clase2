@@ -91,17 +91,30 @@ Fortunately, python3 interpreter and C compiler are preinstalled on Linux, so no
 </p>
 
 ## CopyQ
+Clipboard manager.
+
+![](https://i.postimg.cc/1RK9KRCF/Screenshot-from-2022-03-18-17-24-10.png)
+
+```console
+sudo add-apt-repository ppa:hluk/copyq
+sudo apt update
+sudo apt install copyq
+```
 
 ## Tree
+Shows the hierachy og the linux files in a graphical way.
+
+![](https://i.postimg.cc/zvdYYB6P/Screenshot-from-2022-03-18-17-25-20.png)
+
 ```console
 sudo apt install tree
 ```
 
 ## Locate
+Simplifies terminal searches
 ```console
 sudo apt install locate
 ```
-
 
 ------------
 
@@ -178,14 +191,13 @@ cat prueba.txt
 
 ## Catkin workspace
 
-It is an especial place where ROS packages ara gonna be located and modified (your owns packages). You can have as many *workspaces* as you want, but for now let's create just one:
+It is an especial place where ROS packages are gonna be located and modified (your owns packages). You can have as many *workspaces* as you want, but for now let's create just one:
 
 ```console
 cd ~
 mkdir catkin_ws
 cd catkin_ws
 mkdir src
-cd ..
 catkin build
 ```
 The previous lines create a folder named *catkin_ws*, it is the actual *workspace*. The last line just compile all the ws. *catkin build* could be replaced by *catkin_make*, but remember it implies to compile the entire ws, not just the package you select.
@@ -224,8 +236,9 @@ You will get something like this:
 ![alt text](https://i.postimg.cc/FsD45dRb/Screenshot-from-2022-03-04-12-10-50.png)
 If you are lucky enough, you will get a better turtle icon than me.
 
-##### Nodes and Topics
+### Nodes and Topics
 In the third terminal run:
+
 **Third terminal**
 ```console
 rostopic list
@@ -236,6 +249,7 @@ rosnode list
 You will see all topics and nodes running. Notice that the topics related to the turtle simulation have the */turtle1* namespace.
 
 Now in the same terminal run:
+
 **Third terminal**
 ```console
 rosrun turtlesim turtle_teleop_key
@@ -243,12 +257,43 @@ rosrun turtlesim turtle_teleop_key
 It will allow you to move the turtle around using the keys.
 
 Open a new terminal and run:
+
 **Fourth terminal**
 ```console
 rqt_graph
 ```
 ![alt text](https://i.postimg.cc/0NJRwVCZ/Screenshot-from-2022-03-04-12-13-44.png)
+
 A graphical visualization of the topics and nodes will appear, It shows the interconnections between them.
+
+### Pose subscription
+In the fourth terminal end the *rqt_graph* and run:
+```console 
+rostopic echo /turtle1/pose
+```
+![alt text](https://i.postimg.cc/XYkcjCQJ/Screenshot-from-2022-03-18-17-10-58.png)
+
+It will subscribe to the */turtle1/pose* topic that uses the *turtlesim/Pose*, which consists of 5 float32 that describes the turtle pose and velocities. Just in case check the message info.
+
+![](https://i.postimg.cc/xjmmjmd2/Screenshot-from-2022-03-18-17-11-24.png)
+
+### cmd_vel publishing
+Now finish the sub process an type:
+```console 
+rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist "linear:
+  x: 1.0
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 1.0" 
+```
+![alt text](https://i.postimg.cc/kgmvPcNz/Screenshot-from-2022-03-18-17-14-04.png)
+
+The turtle moves.....so cool.
+
+**Tip:** Check the *cmd_vel geometry_msgs/Twist* using *rosmsg info*.
 
 ------------
 ## hello_turtle package

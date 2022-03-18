@@ -147,17 +147,22 @@ cd ..
 ```console
 cd ~
 ```
+*Esto último también se puede lograr con el comando cd solo.*
+```console
+cd
+```
+
 - **cat:** 
 ```console
 cat prueba.txt
 ```
-- **:** 
+- **gedit:** abre un archivo en el editor de texto gedit.
 ```console
-
+gedit prueba.txt
 ```
-- **:** 
+- **rm:** elimina un archivo
 ```console
-
+rm prueba.txt
 ```
 - **:** 
 ```console

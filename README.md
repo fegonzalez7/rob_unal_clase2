@@ -90,9 +90,105 @@ Fortunately, python3 interpreter and C compiler are preinstalled on Linux, so no
 <img src="https://i.postimg.cc/RCJ4QfRf/Screenshot-from-2022-03-08-21-10-26.png" alt="drawing" width="600"/>
 </p>
 
+## CopyQ
+
+## Tree
+```console
+sudo apt install tree
+```
+
+## Locate
+```console
+sudo apt install locate
+```
+
+
 ------------
 
 If I found more tools, I will add them here. If you find something interesting don't hesitate of letting me know.
+
+------------
+
+## Useful commands - Linux terminal
+
+ - **pwd:** Shows the current folder.
+```console
+pwd
+```
+ - **clear:** Clenas the terminal.
+```console
+clear
+```
+ - **ls:** Lists folder content (some).
+```console
+ls
+```
+- **ll:** Lists folder content (all).
+```console
+ll
+```
+- **touch:** Creates a file 
+```console
+touch prueba.txt
+```
+- **mkdir:** Creates a new folder
+```console
+makdir carpeta
+```
+ - **cd + path:** Changes the path to a certain location
+```console
+cd Downloads
+```
+- **cd ..:** Jumps to the previous folder
+```console
+cd ..
+```
+ - **~:** Home folder.
+```console
+cd ~
+```
+- **cat:** 
+```console
+cat prueba.txt
+```
+- **:** 
+```console
+
+```
+- **:** 
+```console
+
+```
+- **:** 
+```console
+
+```
+
+**Useful tricks:**
+- Ctl + Atl + t opens a new terminal.
+- Ctl + l cleans the terminal
+- Ctl + c ends the terminal's process
+- Ctl + shift + c copies from the terminal
+- Ctl + shift + v pastes to the terminal
+- Ctl + r reverse search
+- Tab autocompletes
+- Up and down arrows allows moving to past commands
+
+------------
+
+## Catkin workspace
+
+It is an especial place where ROS packages ara gonna be located and modified (your owns packages). You can have as many *workspaces* as you want, but for now let's create just one:
+
+```console
+cd ~
+mkdir catkin_ws
+cd catkin_ws
+mkdir src
+cd ..
+catkin build
+```
+The previous lines create a folder named *catkin_ws*, it is the actual *workspace*. The last line just compile all the ws. *catkin build* could be replaced by *catkin_make*, but remember it implies to compile the entire ws, not just the package you select.
 
 ------------
 
@@ -102,7 +198,16 @@ Now the real businesses.
 
 Clone the *hello_turtle* repo from [here](https://github.com/felipeg17/hello_turtle). It's a sort of hello world in the ROS community. Some changes have been added, but don't worry, during the class you will learn most of the concepts.
 
-##### Run ROSCORE and Turtlesim_node
+```console
+cd catkin_ws/src
+git clone https://github.com/felipeg17/hello_turtle.git
+```
+Important: I am assuming you already created the catkin_ws.
+
+-----------
+
+### Run ROSCORE and Turtlesim_node
+
 First, open 3 terminals (if you use Kitty press ctrl + shift + enter three times) and run:
 **First terminal**
 ```console
@@ -153,6 +258,7 @@ Firstly look at the files and dirs structure:
 ![alt text](https://i.postimg.cc/tTNR0k7q/Screenshot-from-2022-03-04-13-47-28.png)
 
 It resembles the ROS recommended structure.
+
 ![alt text](https://miro.medium.com/max/1400/0*vfNM1mbkhUpvK-nW.png)
 
 The package consists of: 

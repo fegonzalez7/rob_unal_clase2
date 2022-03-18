@@ -209,6 +209,7 @@ Important: I am assuming you already created the catkin_ws.
 ### Run ROSCORE and Turtlesim_node
 
 First, open 3 terminals (if you use Kitty press ctrl + shift + enter three times) and run:
+
 **First terminal**
 ```console
 roscore

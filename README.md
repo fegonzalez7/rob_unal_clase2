@@ -160,18 +160,39 @@ cd ..
 ```console
 cd ~
 ```
+You can also go to the Home folder using cd alone
+```console
+cd 
+```
 - **cat:** 
 ```console
 cat prueba.txt
 ```
-- **:** 
+- **gedit:** open a text file with the text editor gedit.
 ```console
-
+gedit prueba.txt
 ```
 - **:** 
+- **rm:** deletes a file.
 ```console
-
+rm prueba.txt
 ```
+
+- **cp:** copy a file or a directory 
+```console
+cp prueba.txt prueba_backup.txt```
+```
+
+- **mv:** it is used to move files to another directory 
+```console
+mv prueba.txt /tmp
+```
+
+and it is also used to rename files.
+```console
+mv prueba.txt prueba2.txt
+```
+
 - **:** 
 ```console
 

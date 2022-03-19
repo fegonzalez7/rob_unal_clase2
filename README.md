@@ -38,6 +38,11 @@ sudo apt install python3-rosdep
 sudo rosdep init
 rosdep update
 ```
+If you use zsh instead of bash, change the commands 6 and 7 to
+```console
+echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
+source ~/.zshrc
+```
 Please visit the [Frobs_RL](https://github.com/jmfajardod/frobs_rl "Frobs_RL") repo, leave a star and salute FajardROS (One of the only few guys that has master ROS).
 
 ### Recommended apps/packages

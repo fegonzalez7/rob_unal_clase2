@@ -402,7 +402,7 @@ The other parts of the packages will be treated in class, so try to attempt.
 
 ------------
 
-`<Lab guide>` : < Soon >
+`<Lab guide>` : https://drive.google.com/file/d/19UOE_eI-ob2ZymNHWFrYgrxLQfgOon43/view?usp=sharing 
 
 ------------
 

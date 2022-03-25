@@ -25,7 +25,7 @@ Once Linux has been installed, it's ROS time. For this course, ROS Noetic will b
 
 In any case, I left the instructions in this repo as well. Just open a new terminal and run the following commands:
 
-```console
+```shell
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt install curl
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
@@ -39,7 +39,7 @@ sudo rosdep init
 rosdep update
 ```
 If you use zsh instead of bash, change the commands 6 and 7 to
-```console
+```shell
 echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
 source ~/.zshrc
 ```
@@ -69,7 +69,7 @@ Linux terminal is really powerful, when you master the shell you are gonna look 
 #### Catkin build
 Once you install ROS you realize that catkin is a package compiler (kinda). *catkin_make* compiles the entire workspace, there is no harm if you have a couple of light packages, but if you have a lot of packages in one workspace, I recommend you to install *catkin_build*. It will allow compiling the packages separately. Open a terminal (hopefully kitty) and run:
 
-```console
+```shell
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
@@ -79,7 +79,7 @@ sudo apt-get install python3-catkin-tools
 ### Git
 If you are reading this, you will probably have some experience with repositories,  in the case you do not have it in your machine, just open a terminal and run:
 
-```console
+```shell
 sudo apt update
 sudo apt install git
 git --version
@@ -100,7 +100,7 @@ Clipboard manager.
 
 ![](https://i.postimg.cc/1RK9KRCF/Screenshot-from-2022-03-18-17-24-10.png)
 
-```console
+```shell
 sudo add-apt-repository ppa:hluk/copyq
 sudo apt update
 sudo apt install copyq
@@ -111,13 +111,13 @@ Shows the hierarchy of the linux files in a graphical way.
 
 ![](https://i.postimg.cc/zvdYYB6P/Screenshot-from-2022-03-18-17-25-20.png)
 
-```console
+```shell
 sudo apt install tree
 ```
 
 ## Locate
 Simplifies terminal searches
-```console
+```shell
 sudo apt install locate
 ```
 
@@ -130,81 +130,81 @@ If I found more tools, I will add them here. If you find something interesting d
 ## Useful commands - Linux terminal
 
  - **pwd:** Shows the current folder.
-```console
+```shell
 pwd
 ```
  - **clear:** Clenas the terminal.
-```console
+```shell
 clear
 ```
  - **ls:** Lists folder content (some).
-```console
+```shell
 ls
 ```
 - **ll:** Lists folder content (all).
-```console
+```shell
 ll
 ```
 - **touch:** Creates a file 
-```console
+```shell
 touch prueba.txt
 ```
 - **mkdir:** Creates a new folder
-```console
+```shell
 makdir carpeta
 ```
  - **cd + path:** Changes the path to a certain location
-```console
+```shell
 cd Downloads
 ```
 - **cd ..:** Jumps to the previous folder
-```console
+```shell
 cd ..
 ```
  - **~:** Home folder.
-```console
+```shell
 cd ~
 ```
 You can also go to the Home folder using cd alone
-```console
+```shell
 cd 
 ```
 - **cat:** 
-```console
+```shell
 cat prueba.txt
 ```
 - **gedit:** open a text file with the text editor gedit.
-```console
+```shell
 gedit prueba.txt
 ```
 - **:** 
 - **rm:** deletes a file.
-```console
+```shell
 rm prueba.txt
 ```
 
 - **cp:** copy a file or a directory 
-```console
+```shell
 cp prueba.txt prueba_backup.txt```
 ```
 
 - **mv:** it is used to move files to another directory 
-```console
+```shell
 mv prueba.txt /tmp
 ```
 
 and it is also used to rename files.
-```console
+```shell
 mv prueba.txt prueba2.txt
 ```
 
 - **code:** if you are using VSCode, you can open a file with: 
-```console
+```shell
     code <filename>
 ```
 
 or open vscode in current folder with:
-```console
+```shell
     code .
 ```
 
@@ -224,7 +224,7 @@ or open vscode in current folder with:
 
 It is an especial place where ROS packages are gonna be located and modified (your owns packages). You can have as many *workspaces* as you want, but for now let's create just one:
 
-```console
+```shell
 cd ~
 mkdir catkin_ws
 cd catkin_ws
@@ -236,29 +236,29 @@ The previous lines create a folder named *catkin_ws*, it is the actual *workspac
 
 ### Some aliases that may be useful:
 To go directly to the folder where the workspace or packages are located (src folder), we can use:
-```console
+```shell
 cw #go to the workspace
 cs #go to the src folder
 ```
 
 When creating a new package in ROS, it is important to indicate the author, the license and maintainer of the package; this is done by modifying _the package.xml_ file inside the package folder or by creating the package with the author, license and maintainer set. To avoid doing this every time a package is created you can use the command:
-```console
-cpkg <<package name>>
+```shell
+cpkg <<package_name>>
 ```
 
 Finally, if you want to build a package and avoid to source the _setup.bash_ file, you can use the command:
-```console
+```shell 
 cm #To build all packages
-cm <<package name>> #To build a specific package
+cm <<package_name>> #To build a specific package
 ```
 
 
 **Configuration:**
 If you want to configure these aliases, you just have to write in the terminal
-```console
+```shell
 echo "alias cw='cd ~/catkin_ws'" >> ~/.bashrc
 echo "alias cs='cd ~/catkin_ws/src'" >> ~/.bashrc
-echo "alias cpkg='cs && catkin create pkg -a \"<<author name>>\" \"<<author email>>\" -l \"<<license>>\" -m \"<<maintainer name>>\" \"<<maintainer email>>\"'" >> ~/.bashrc
+echo "alias cpkg='cs && catkin create pkg -a \"<<author_name>>\" \"<<author_email>>\" -l \"<<license>>\" -m \"<<maintainer_name>>\" \"<<maintainer_email>>\"'" >> ~/.bashrc
 echo "function cm(){ cd ~/catkin_ws && catkin build \"$@\" && cw && source devel/setup.bash;}"
 ```
 >**_NOTE:_**  Do not forget to modify the fields with << >>
@@ -274,7 +274,7 @@ Now the real businesses.
 
 Clone the *hello_turtle* repo from [here](https://github.com/felipeg17/hello_turtle). It's a sort of hello world in the ROS community. Some changes have been added, but don't worry, during the class you will learn most of the concepts.
 
-```console
+```shell
 cd catkin_ws/src #or cs
 git clone https://github.com/felipeg17/hello_turtle.git
 ```
@@ -287,11 +287,11 @@ Important: I am assuming you already created the catkin_ws.
 First, open 3 terminals (if you use Kitty press ctrl + shift + enter three times) and run:
 
 **First terminal**
-```console
+```shell
 roscore
 ```
 **Second terminal**
-```console
+```shell
 rosrun turtlesim turtlesim_node
 ```
 ![alt text](https://i.postimg.cc/j2TbKyPc/Screenshot-from-2022-03-04-12-10-27.png)
@@ -304,7 +304,7 @@ If you are lucky enough, you will get a better turtle icon than me.
 In the third terminal run:
 
 **Third terminal**
-```console
+```shell
 rostopic list
 rosnode list
 ```
@@ -315,7 +315,7 @@ You will see all topics and nodes running. Notice that the topics related to the
 Now in the same terminal run:
 
 **Third terminal**
-```console
+```shell
 rosrun turtlesim turtle_teleop_key
 ```
 It will allow you to move the turtle around using the keys.
@@ -323,7 +323,7 @@ It will allow you to move the turtle around using the keys.
 Open a new terminal and run:
 
 **Fourth terminal**
-```console
+```shell
 rqt_graph
 ```
 ![alt text](https://i.postimg.cc/0NJRwVCZ/Screenshot-from-2022-03-04-12-13-44.png)
@@ -332,7 +332,7 @@ A graphical visualization of the topics and nodes will appear, It shows the inte
 
 ### Pose subscription
 In the fourth terminal end the *rqt_graph* and run:
-```console 
+```shell 
 rostopic echo /turtle1/pose
 ```
 ![alt text](https://i.postimg.cc/XYkcjCQJ/Screenshot-from-2022-03-18-17-10-58.png)
@@ -343,7 +343,7 @@ It will subscribe to the */turtle1/pose* topic that uses the *turtlesim/Pose*, w
 
 ### cmd_vel publishing
 Now finish the sub process an type:
-```console 
+```shell 
 rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist "linear:
   x: 1.0
   y: 0.0
@@ -387,20 +387,20 @@ There are a couple of missing folders, for that I **strongly** suggest (*command
  - [**ROS service running**:](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29): Shows how to write a pair client and service in Python.
 
 Before continuing, close all terminal and ROS processes. In a new clean terminal run:
-```console
+```shell
 cd ~/catkin_ws/src
 git clone https://github.com/felipeg17/hello_turtle.git
 ```
 It cloned the *hello_turtle* package in the *catkin_ws*.
 
-```console
+```shell
 cd ~/catkin_ws/
 catkin build hello_turtle 
 ```
 If you installed *catkin tools*
 
 Or
-```console
+```shell
 cd ~/catkin_ws/
 catkin make
 ```
@@ -410,13 +410,13 @@ You will get something like this: (Ignore the warnings, it's just cmake crying)
 ![atl text](https://i.postimg.cc/Xqm40zKC/Screenshot-from-2022-03-04-14-22-27.png)
 
 Now we source the changes:
-```console
+```shell
 cd ~/catkin_ws/
 source devel/setup.bash
 ```
 
 Moment of true, run this command:
-```console
+```shell
 roslaunch hello_turtle turtle.launch
 ```
 ![alt text](https://i.postimg.cc/hPXVbQfy/Screenshot-from-2022-03-04-14-29-48.png)

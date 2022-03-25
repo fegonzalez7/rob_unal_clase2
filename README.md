@@ -107,7 +107,7 @@ sudo apt install copyq
 ```
 
 ## Tree
-Shows the hierachy og the linux files in a graphical way.
+Shows the hierarchy of the linux files in a graphical way.
 
 ![](https://i.postimg.cc/zvdYYB6P/Screenshot-from-2022-03-18-17-25-20.png)
 
@@ -198,9 +198,14 @@ and it is also used to rename files.
 mv prueba.txt prueba2.txt
 ```
 
-- **:** 
+- **code:** if you are using VSCode, you can open a file with: 
 ```console
+    code <filename>
+```
 
+or open vscode in current folder with:
+```console
+    code .
 ```
 
 **Useful tricks:**
@@ -228,6 +233,39 @@ catkin build
 ```
 The previous lines create a folder named *catkin_ws*, it is the actual *workspace*. The last line just compile all the ws. *catkin build* could be replaced by *catkin_make*, but remember it implies to compile the entire ws, not just the package you select.
 
+
+### Some aliases that may be useful:
+To go directly to the folder where the workspace or packages are located (src folder), we can use:
+```console
+cw #go to the workspace
+cs #go to the src folder
+```
+
+When creating a new package in ROS, it is important to indicate the author, the license and maintainer of the package; this is done by modifying _the package.xml_ file inside the package folder or by creating the package with the author, license and maintainer set. To avoid doing this every time a package is created you can use the command:
+```console
+cpkg <<package name>>
+```
+
+Finally, if you want to build a package and avoid to source the _setup.bash_ file, you can use the command:
+```console
+cm #To build all packages
+cm <<package name>> #To build a specific package
+```
+
+
+**Configuration:**
+If you want to configure these aliases, you just have to write in the terminal
+```console
+echo "alias cw='cd ~/catkin_ws'" >> ~/.bashrc
+echo "alias cs='cd ~/catkin_ws/src'" >> ~/.bashrc
+echo "alias cpkg='cs && catkin create pkg -a \"<<author name>>\" \"<<author email>>\" -l \"<<license>>\" -m \"<<maintainer name>>\" \"<<maintainer email>>\"'" >> ~/.bashrc
+echo "function cm(){ cd ~/catkin_ws && catkin build \"$@\" && cw && source devel/setup.bash;}"
+```
+>**_NOTE:_**  Do not forget to modify the fields with << >>
+
+>**_NOTE 2:_**  If you have more than one workspace, you must modify the cw alias to go to the correct workspace path.
+
+
 ------------
 
 ## Turtlesim
@@ -237,7 +275,7 @@ Now the real businesses.
 Clone the *hello_turtle* repo from [here](https://github.com/felipeg17/hello_turtle). It's a sort of hello world in the ROS community. Some changes have been added, but don't worry, during the class you will learn most of the concepts.
 
 ```console
-cd catkin_ws/src
+cd catkin_ws/src #or cs
 git clone https://github.com/felipeg17/hello_turtle.git
 ```
 Important: I am assuming you already created the catkin_ws.
